@@ -1,0 +1,211 @@
+/* =========================================================
+   PAIRMYWORK — GLOBAL THEME
+   Fonts + Colors + Shared Design Tokens
+   ========================================================= */
+
+/* ---------- Google Fonts ---------- */
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap");
+
+
+/* =========================================================
+   ROOT VARIABLES
+   ========================================================= */
+
+:root {
+  /* ---------- Base Colors ---------- */
+
+  --bg: #f7f7f4;
+  --surface: #ffffff;
+  --surface-soft: #eeeeea;
+
+  --text: #11120f;
+  --muted: #6d6f67;
+  --muted-dark: #50524b;
+
+  --border: #dedfd8;
+  --border-strong: #cfd1c8;
+
+  /* ---------- Brand ---------- */
+
+  --accent: #3847f2;
+  --accent-hover: #3847f2;
+  --accent-soft: rgba(69, 81, 255, 0.14);
+
+  /* Dark brand surface */
+  --dark: #151611;
+  --dark-soft: #20221b;
+
+  /* ---------- Status ---------- */
+
+  --success: #16834b;
+  --success-soft: rgba(22, 131, 75, 0.1);
+
+  --danger: #d64545;
+  --danger-soft: rgba(214, 69, 69, 0.1);
+
+  --warning: #b7791f;
+  --warning-soft: rgba(183, 121, 31, 0.1);
+
+  /* ---------- Shadows ---------- */
+
+  --shadow-sm: 0 8px 30px rgba(17, 18, 15, 0.06);
+  --shadow-md: 0 15px 45px rgba(17, 18, 15, 0.08);
+  --shadow-lg: 0 25px 70px rgba(17, 18, 15, 0.10);
+
+  /* ---------- Layout ---------- */
+
+  --max: 1180px;
+
+  /* ---------- Radius ---------- */
+
+  --radius-sm: 10px;
+  --radius: 16px;
+  --radius-lg: 26px;
+  --radius-pill: 999px;
+
+  /* ---------- Transitions ---------- */
+
+  --transition: 180ms ease;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+
+  background: var(--bg);
+  color: var(--text);
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+
+/* =========================================================
+   CONTRAST FIXES
+   Prevent global typography colors from hiding on dark areas
+   ========================================================= */
+
+/* Dark surfaces */
+.dark,
+.dark-section,
+.dark-surface,
+.problem-card.dark,
+.audience-card.dark,
+.visual-card.dark,
+.matching-card,
+.cta-box {
+    color: #ffffff;
+}
+
+/* Headings inside dark surfaces */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6,
+
+.dark-section h1,
+.dark-section h2,
+.dark-section h3,
+.dark-section h4,
+.dark-section h5,
+.dark-section h6,
+
+.dark-surface h1,
+.dark-surface h2,
+.dark-surface h3,
+.dark-surface h4,
+.dark-surface h5,
+.dark-surface h6,
+
+.problem-card.dark h1,
+.problem-card.dark h2,
+.problem-card.dark h3,
+.problem-card.dark h4,
+
+.audience-card.dark h1,
+.audience-card.dark h2,
+.audience-card.dark h3,
+.audience-card.dark h4,
+
+.visual-card.dark h1,
+.visual-card.dark h2,
+.visual-card.dark h3,
+.visual-card.dark h4,
+
+.matching-card h1,
+.matching-card h2,
+.matching-card h3,
+.matching-card h4,
+
+.cta-box h1,
+.cta-box h2,
+.cta-box h3,
+.cta-box h4 {
+    color: #ffffff;
+}
+
+/* Paragraphs inside dark surfaces */
+.dark p,
+.dark-section p,
+.dark-surface p,
+.problem-card.dark p,
+.audience-card.dark p,
+.visual-card.dark p,
+.matching-card p,
+.cta-box p {
+    color: #a7a9a0;
+}
+
+/* Labels / secondary text */
+.dark .kicker,
+.dark .visual-label,
+.dark .audience-tag,
+.dark-section .kicker,
+.visual-card.dark .visual-label,
+.audience-card.dark .audience-tag,
+.matching-card-label,
+.cta-box .kicker {
+    color: #9c9f95;
+}
+
+
+/* =========================================================
+   LIGHT SURFACE CONTRAST
+   ========================================================= */
+
+.audience-card.light {
+    color: var(--text);
+}
+
+.audience-card.light h1,
+.audience-card.light h2,
+.audience-card.light h3,
+.audience-card.light h4 {
+    color: var(--text);
+}
+
+.audience-card.light p {
+    color: var(--muted);
+}
+
